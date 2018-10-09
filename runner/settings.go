@@ -22,7 +22,7 @@ var settings = map[string]string{
 	"root":              ".",
 	"tmp_path":          "./tmp",
 	"build_name":        "runner-build",
-	"build_args":        "",
+	"run_args":          "",
 	"build_log":         "runner-build-errors.log",
 	"valid_ext":         ".go, .tpl, .tmpl, .html",
 	"no_rebuild_ext":    ".tpl, .tmpl, .html",
@@ -128,8 +128,8 @@ func buildPath() string {
 	return p
 }
 
-func buildArgs() []string {
-	return strings.Split(settings["build_args"], ",")
+func runArgs() []string {
+	return strings.Split(settings["run_args"], ",")
 }
 
 func buildErrorsFileName() string {
